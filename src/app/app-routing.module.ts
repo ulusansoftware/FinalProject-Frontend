@@ -5,6 +5,7 @@ import { ProductComponent } from './components/product/product.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: ProductComponent },
   { path: 'products', component: ProductComponent },
+  { path: 'products/category/:categoryId', component: ProductComponent },
 ];
 
 @NgModule({
@@ -12,3 +13,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+ 
