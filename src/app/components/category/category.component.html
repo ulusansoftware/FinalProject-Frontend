@@ -1,7 +1,9 @@
 <ul class="list-group">
-  <li class="list-group-item">Bilgisayar Donanımları</li>
-  <li class="list-group-item">Masa araç-gereçleri</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+  <li 
+  (click)="setCurrentCategory(category)" 
+  *ngFor="let category of categories" 
+  [class]="getCurrentCategoryClass(category)">{{category.categoryName}}</li>
+  
 </ul>
+
+<h6 *ngIf="currentCategory">{{currentCategory.categoryName}}<br> Kategorisini seçtiniz</h6>
